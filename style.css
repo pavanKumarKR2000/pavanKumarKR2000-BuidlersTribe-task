@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.cdnfonts.com/css/f-feeling-soon');
+
+:root{
+      font-size: 62.5%;
+      --gutter:7rem;
+      --font-size-nav-bar:1.5rem;
+      --font-size-description:1.8rem;
+      --font-family-heading:'f Feeling Soon', sans-serif;
+      --font-size-heading:3rem;
+      --flex-gap:2.3rem;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:overpass;
+}
+
+/*---- utility classes start----*/
+
+.flex-align-center{
+    display:flex;
+    align-items: center;
+}
+
+.btn{
+    font-size: calc(var(--font-size-description) - 0.3rem);
+    text-align: center;
+    padding-inline: 6rem;
+    padding-block: 0.5rem;
+    border-radius: 5px;
+    background-color:#407BFF;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*---- utility classes end ----*/
+
+/*-----------navigation bar----------------*/
+.nav-bar{
+    padding-inline: var(--gutter);
+    font-size: var(--font-size-nav-bar);
+}
+
+.nav-bar .nav-bar-wrapper{
+    justify-content: space-between;
+}
+
+.nav-bar .nav-bar-wrapper .logo{
+    justify-content: left;
+}
+
+.nav-bar .nav-bar-wrapper .toggle{
+    display: none;
+}
+
+.nav-bar .nav-bar-wrapper .toggle button{
+    padding:1rem;
+    cursor: pointer;
+}
+
+
+.nav-bar .nav-bar-wrapper .nav-menu-wrapper .nav-menu{
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--flex-gap);
+}
+
+.nav-bar .nav-bar-wrapper .nav-menu-wrapper .nav-menu li{
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-bar .nav-bar-wrapper .nav-menu-wrapper .nav-menu li a{
+    text-decoration: none;
+    color: black;
+   
+}
+
+
+.nav-bar .nav-bar-wrapper .nav-menu-wrapper .nav-menu li :after {    
+    background: none repeat scroll 0 0 transparent;
+    top:2rem;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background:black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  .nav-bar .nav-bar-wrapper .nav-menu-wrapper .nav-menu li :hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+/*-----------title of the event----------------*/
+.title{
+    padding-inline: var(--gutter);
+}
+
+.title h1{
+     font-family: var(--font-family-heading);
+     font-size: var(--font-size-heading);
+     font-weight: 300;
+}
+
+
+/*-----------banner----------------*/
+.banner-wrapper{
+  padding-block:1rem;;   
+  padding-inline:var(--gutter);
+}
+
+.banner-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*-----------description section----------------*/
+.description-wrapper{
+    padding-inline:var(--gutter);
+}
+
+.description-wrapper .heading-1 h2{
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading);
+    font-weight: 300;
+}
+
+.description-wrapper .heading-2 h1{
+    font-family: var(--font-family-heading);
+    font-size: calc(var(--font-size-heading) + 2rem);
+    font-weight: 300;
+}
+
+.description-wrapper .description p{
+    font-size: var(--font-size-description);
+    line-height: 3rem;
+    padding-block: 2rem;
+}
+
+.description-wrapper .date{
+    padding-block: 2rem;
+}
+
+.description-wrapper .date img{
+    height:100%;
+}
+
+.description-wrapper .apply-btn{
+    padding-block: 1rem;
+}
+
+
+
+/*-------- information section---------*/
+.info-wrapper{
+    height: max-content;
+    padding-inline: var(--gutter);
+    text-align: center;
+}
+
+.info-wrapper div{
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--flex-gap);
+    width:50%;
+    height:70%;
+}
+
+.info-wrapper div h1{
+    font-family: var(--font-family-heading);
+}
+
+.info-wrapper div:nth-child(1){
+    padding-block: 10rem;
+    border-right: 1px solid black;
+}
+
+.info-wrapper div:nth-child(2){
+    padding-block: 15rem;
+}
+
+.info-wrapper div:nth-child(1) p,.info-wrapper div:nth-child(2) p{
+    font-size: var(--font-size-description);
+}
+
+.info-wrapper div:nth-child(1) h1,.info-wrapper div:nth-child(2) h1{
+    font-size:calc(var(--font-size-heading) + 4rem);
+}
+
+
+
+/*-------- mentoring section---------*/
+
+.mentoring-sessions-wrapper{
+    height:max-content;
+    padding:var(--gutter);
+}
+
+.mentoring-sessions-wrapper .mentoring-sessions-heading{
+    padding-block: 3rem;
+}
+
+.mentoring-sessions-wrapper .mentoring-sessions-heading h1{
+    text-align: center;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading);
+}
+
+.mentoring-sessions-wrapper .profiles-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    row-gap: 4rem;
+}
+
+.mentoring-sessions-wrapper .profiles-wrapper .profile-item p{
+    padding-block: 1rem;
+    font-size: var(--font-size-description);
+    text-align: center;
+}
+
+
+
+/*------------ frequently asked questions -----------*/
+
+.faq-wrapper{
+    min-height: 65rem;
+    padding-inline: var(--gutter);
+}
+
+.faq-wrapper .faq-heading h1{
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading);
+    text-align: center;
+}
+
+.faq-wrapper .questions .question-item{
+    padding-block: 2rem;
+}
+
+.faq-wrapper .questions{
+    padding-bottom: 4rem;
+    border-bottom: 1px solid black;
+}
+
+.faq-wrapper .questions .question-item p{
+   font-size: var(--font-size-description);
+   padding-right: 10rem;
+   line-height: 3rem;
+}
+.faq-wrapper .questions .question-item p::first-line{
+    color: blue;
+}
+
+/*--------- footer ----------------*/
+
+.footer{
+    padding-inline: var(--gutter);
+}
+
+/*------------- media queries -----------------*/
+
+@media screen and (max-width: 1024px){
+        
+       :root{
+        --gutter:2rem;
+       }
+
+       .nav-bar .nav-bar-wrapper{
+        flex-wrap: wrap;
+       }
+
+      .logo{
+        width:50%;
+      }
+      .nav-bar .nav-bar-wrapper .toggle{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav-bar .nav-bar-wrapper .nav-menu-wrapper{
+        display: none;
+      }
+
+      .nav-bar .nav-bar-wrapper .nav-menu-wrapper.show{
+        display:block;
+      }
+
+      .nav-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+      }
+}
+
+@media screen and (max-width:720px){
+
+    :root{
+        --gutter:2rem;
+       }
+
+       .nav-bar .nav-bar-wrapper{
+        flex-wrap: wrap;
+       }
+
+    .info-wrapper{
+        flex-direction: column;
+        margin-block: 4rem;
+    }
+
+    .info-wrapper div{
+        width: 100%;
+    }
+
+    .info-wrapper div:nth-child(1){
+        padding-block:2rem;
+        border-bottom:1px solid black;
+        border-right: none;
+    }
+    
+    .info-wrapper div:nth-child(2){
+        padding-block: 2rem;
+    }
+
+    .mentoring-sessions-wrapper .profiles-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .faq-wrapper .questions .question-item p{
+        padding-right: 5rem;
+     }
+
+    
+}
+
+@media screen and (min-width:720px) and (max-width:1024px){
+      
+    :root{
+        --gutter:4rem;
+       }
+
+       .nav-bar .nav-bar-wrapper{
+        flex-wrap: wrap;
+       }
+
+    .mentoring-sessions-wrapper .profiles-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
